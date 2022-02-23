@@ -24,10 +24,27 @@ public class Status {
     public static void main(String[] args)
     {
     Scanner in =new Scanner(System.in);
-    System.out.println("Enter the user status code (zero,one,two,three) in string");
-    String code = in.next();
-    StausUser t= new StausUser();
-    t.statusDetail(code); 
+        
+        StatusDetail status0 = StatusDetail.ZERO;
+        StatusDetail status1 = StatusDetail.ONE;
+        StatusDetail status2 = StatusDetail.TWO;
+        StatusDetail status3 = StatusDetail.THREE;
+              
+        System.out.println("Enter the user status code (zero,one,two,three)");
+        String code = in.next();
+        
+        if(code.equalsIgnoreCase("zero") || code.equals("0")){
+            System.out.println(status0.getDesc());
+        }else if(code.equalsIgnoreCase("one") || code.equals("1")){
+            System.out.println(status1.getDesc());
+        }else if(code.equalsIgnoreCase("two") || code.equals("2")){
+            System.out.println(status2.getDesc());
+        }else if(code.equalsIgnoreCase("three") || code.equals("3")){
+            System.out.println(status3.getDesc());
+        }else{
+            System.out.println("Wrong Status!");
+        }
+   
     }
     
 }
